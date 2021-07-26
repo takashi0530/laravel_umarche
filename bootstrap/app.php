@@ -26,6 +26,7 @@ $app = new Illuminate\Foundation\Application(
 |
 */
 
+// サービスコンテナの仕組み
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
     App\Http\Kernel::class

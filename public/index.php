@@ -1,4 +1,5 @@
 <?php
+// このファイルはlaravelがまず最初に読み込むファイル index.php
 
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
@@ -31,6 +32,8 @@ if (file_exists(__DIR__.'/../storage/framework/maintenance.php')) {
 |
 */
 
+// autoloadを読み込むことで、requireなしでクラスを読み込める
+// vendor/autoload.php
 require __DIR__.'/../vendor/autoload.php';
 
 /*
@@ -44,6 +47,7 @@ require __DIR__.'/../vendor/autoload.php';
 |
 */
 
+// bootstrap/app.php を読み込んでる
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
 $kernel = $app->make(Kernel::class);
